@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1">
+<title>RPS</title>
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.0/jquery.min.js"></script>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<link rel="stylesheet" href="css/characters.css">
+<script src="https://github.com/admsev/jquery-play-sound/blob/master/jquery.playSound.js"></script>
+
+
+
+<style>
+	img{
+		border-radius:100px;
+	}
+	h1{
+	font-size:50px;
+	}
+</style>
+</head>
+<body>
+<br><br><br><br>
+<div class="slam body" align="center">
+<h1 id="slam1 title">Choose your character</h1>
+<br><br><br>
+
+<div class="row">
+	<div class="slam2 col-sm-4">
+		<h1 id="Rock1"><img id="Rock" alt="Rock" src="img/characters/rock.png" width="200px"></h1>
+		<h2 id="caption" class="caption">Rock</h2>
+	</div>
+	<div class="slam2 col-sm-4">
+		<h1 id="Paper1"><img id="Paper" alt="Paper" src="img/characters/paper.png" width="140px"></h1>
+		<h2 id="caption1" class="caption">Paper</h2>
+		<h1 id="countdown"></h1>
+	</div>
+	<div class="slam2 col-sm-4">
+		<h1 id="Scissors1"><img id="Scissors" alt="Scissors" src="img/characters/scissors.png" width="140px"></h1>
+		<h2 id="caption2" class="caption">Scissors</h2>
+	</div>
+
+</div>
+<h1 id="Test1"><a href="stat.html"><button class="button slam" id="Test">Test</button></a></h1>
+
+<h3>
+<button class="button slam" id="button"><a href="RPS Index.html"><i class="fa fa-chevron-circle-left fa-2x" aria-hidden="true"></i></a></button>
+
+</h3>
+
+<footer class="footer"><strong>Tahfimul Latif. 2017.</strong></footer>
+
+</div>
+
+<script>
+
+$('img').click(function animation(){
+	var rockButton = document.getElementById('Rock1');
+	var paperButton = document.getElementById('Paper1');
+	var scissorsButton = document.getElementById('Scissors1');	
+	var num = document.getElementById('countdown');
+	
+	num.innerHTML = "3"+"<br>"+"The stat is coming...";    
+    setTimeout(function() {
+        num.innerHTML = "2"+"<br>"+"Just wait..";
+    }, 2000);    
+   
+     setTimeout(function() {
+        num.innerHTML = "1"+"<br>"+"And now.";
+    }, 4000);
+    $('img').animate({'top': '40px'}, "fast");
+		document.getElementById("Rock1").innerHTML="<img onload= main() src= https://media0.giphy.com/media/8PFAOTec39yW4/giphy.gif />"
+		document.getElementById("Paper1").innerHTML=""
+		document.getElementById("Scissors1").innerHTML="<img src= https://media0.giphy.com/media/8PFAOTec39yW4/giphy.gif />"
+		document.getElementById("caption").innerHTML=""
+	 	document.getElementById("caption1").innerHTML=""
+		document.getElementById("caption2").innerHTML=""
+		document.getElementById("Test1").innerHTML=""
+		setTimeout(function(){ window.location.href='stat.html'; }, 3000);		
+	});
+
+$(document).on('click','#Rock',function(){
+	console.log("rock");
+	localStorage.setItem("Choice","Rock");
+	
+});
+$(document).on('click','#Paper',function(){
+	console.log("paper");
+	localStorage.setItem("Choice","Paper");
+});
+$(document).on('click','#Scissors',function(){
+	console.log("scissors");
+	localStorage.setItem("Choice","Scissors");
+});
+$(document).on('click','#Test',function(){
+	console.log("test");
+	localStorage.setItem("Choice","Test");
+});
+
+</script>
+
+
+<audio id="mp3"   
+   src="sounds/humble-kendrick.mp3" controls autoplay>  
+</audio>
+
+</body>
+</html>

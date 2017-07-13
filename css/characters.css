@@ -1,0 +1,137 @@
+body {
+	margin: 0;
+	animation: rattle 1s infinite;
+  	animation-delay: 0s;
+}
+.slam
+{ 
+  animation: slam .5s;
+  animation-timing-function: ease-in-out;  
+  font-weight: 900;
+  position: relative;  
+  
+}
+
+@keyframes slam
+{
+  0%
+  {
+  	
+    transform: scale(10, 10);
+    opacity: 0;
+  }
+  
+  40%
+  {
+    opacity: 0;
+  }
+  
+  100%
+  {
+    transform: scale(10, 10);
+    opacity: 0;
+  }
+}
+.slam1
+{
+
+  animation: slam1 1s;
+  animation-timing-function: ease-in-out;  
+  font-weight: 900;
+  position: relative;  
+  
+}
+
+@keyframes slam1
+{
+  0%
+  {
+  	margin-top: -5px; margin-left: 0;
+    transform: scale(100, 100);
+    opacity: 1000;
+  }
+  
+  40%
+  {
+    opacity: 1000;
+  }
+  
+  100%
+  {
+    transform: scale(1000, 1000);
+    opacity: 0;
+  }
+}
+.slam2
+{
+  
+  animation: slam2 1.7s;
+  animation-timing-function: ease-in-out;  
+  font-weight: 900;
+  position: relative;  
+  
+}
+
+@keyframes slam2
+{
+  0%
+  {
+  	margin-top: -5px; margin-left: 0;
+    transform: scale(10, 10);
+    opacity: 0;
+  }
+  
+  40%
+  {
+  	margin-top: 0px; margin-left: -5;
+    opacity: 0;
+  }
+  
+  100%
+  {
+  	margin-top: -5px; margin-left: 0;
+    transform: scale(10, 10);
+    opacity: 0;
+  }
+}
+
+
+@keyframes rattle
+{
+  0% { margin-top: 0; margin-left: 0; }
+  10% { margin-top: -2px; margin-left: 0; }
+  20% { margin-top: 0; margin-left: -2px; }
+  30% { margin-top: 5px; margin-left: 0; }
+  40% { margin-top: 0; margin-left: 2px; }
+  50% { margin-top: -2px; margin-left: 0; }
+  60% { margin-top: 0; margin-left: -2px; }
+  70% { margin-top: 2px; margin-left: 0; }
+  80% { margin-top: 0; margin-left: 2px; }
+  90% { margin-top: -2px; margin-left: 0; }
+  100% { margin-top: 0; margin-left: 0; }
+}
+@import url('https://fonts.googleapis.com/css?family=Source+Code+Pro');
+.body{
+padding: 10px;
+background-color: #abcdef;
+border-radius:400px;
+font-family: 'Source Code Pro', monospace;
+}
+
+button{
+background-color:white;
+border-radius: 25px;
+padding: 3px;
+
+}
+
+
+.footer{
+padding: 10px;
+background-color:gray;
+color: white;
+width: 200px;
+border-radius: 5px;
+font-family: 'Scada', sans-serif;
+}
+
